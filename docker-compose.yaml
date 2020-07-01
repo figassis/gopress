@@ -1,0 +1,41 @@
+version: '3.1'
+services:
+  api:
+    build: .
+    # image: "figassis/goinagbe:0.0.1"
+    container_name: goinagbe
+    restart: always
+    ports:
+      - "80:80"
+    environment: 
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      BUCKET: ${BUCKET}
+      BUCKET_PRIVATE_PREFIX: ${BUCKET_PRIVATE_PREFIX}
+      BUCKET_PUBLIC_PREFIX: ${BUCKET_PUBLIC_PREFIX}
+      AWS_REGION: ${AWS_REGION}
+      SES_SENDER: ${SES_SENDER}
+      FQDN: ${FQDN}
+      FRONTEND: ${FRONTEND}
+      COMPANY: ${COMPANY}
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      ENVIRONMENT: ${ENVIRONMENT}
+      JWT_SECRET: ${JWT_SECRET}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_DB: ${REDIS_DB}
+      APP_PORT: ${APP_PORT}
+      USE_COOKIES: ${USE_COOKIES}
+      REQUESTS_PER_SECOND: ${REQUESTS_PER_SECOND}
+      CORS_ALLOW_ORIGINS: ${CORS_ALLOW_ORIGINS}
+      CONTENT_SECURITY_POLICY: ${CONTENT_SECURITY_POLICY}
+      CONTACT_EMAIL: ${CONTACT_EMAIL}
+      CDN: ${CDN}
+      RESET: ${RESET}
+      DATADIR: ${DATADIR}
